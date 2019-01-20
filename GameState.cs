@@ -1,0 +1,1 @@
+﻿public enum GameState {NOT_YET_STARTED, IN_PROGRESS, GAME_OVER};

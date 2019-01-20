@@ -1,0 +1,1 @@
+﻿public enum PerkType {ATTACK_SPEED_100, DAMAGE_50, MOVEMENT_SPEED_30}

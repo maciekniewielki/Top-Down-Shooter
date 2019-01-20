@@ -1,0 +1,1 @@
+﻿public enum EnemyType {NORMAL_ZOMBIE, RED_ZOMBIE}
