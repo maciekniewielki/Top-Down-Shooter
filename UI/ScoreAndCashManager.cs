@@ -50,7 +50,7 @@ public class ScoreAndCashManager : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-	
+        HandleCheats();
 	}
 
     void OnGameEnded()
@@ -64,5 +64,28 @@ public class ScoreAndCashManager : MonoBehaviour
             PlayerPrefs.SetInt("highscore", score);
             PlayerPrefs.Save();
         }
+    }
+
+    void HandleCheats()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Score += 100;
+            Cash += 10;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Player p = Player.instance;
+            p.Health += 10f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Player p = Player.instance;
+            p.ScrapAmount += 10;
+        }
+
+
     }
 }

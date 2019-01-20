@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoBehaviour {
 
     public Text highscoreValue;
+    public GameObject helpWindow;
 	// Use this for initialization
 	void Awake ()
     {
@@ -31,5 +32,15 @@ public class MainMenuManager : MonoBehaviour {
     public void PlayNewGame()
     {
         SceneManager.LoadScene("mainLevel");
+    }
+
+    public void OpenHelpWindow()
+    {
+        helpWindow.SetActive(true);
+    }
+
+    public void CloseHelpWindow()
+    {
+        helpWindow.SetActive(false);
     }
 }
